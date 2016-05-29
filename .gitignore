@@ -1,0 +1,16 @@
+# Java
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+
+# General
+.env
+
+#New Relic
+newrelic_agent.log
+
+# IntelliJ
+.idea/
+*.iml
