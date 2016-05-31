@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar  target/theforce.war
+heroku deploy:war --war target/theforce.war --app the-force
