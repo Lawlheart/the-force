@@ -1,4 +1,4 @@
-package com.lawlietblack.model;
+package com.lawlietblack.theforce.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -18,6 +18,17 @@ public class Device {
         this.type = type;
         this.room = room;
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Device{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", room='" + room + '\'' +
+                ", status='" + status + '\'' +
+                '}';
     }
 
     public Integer getId() {

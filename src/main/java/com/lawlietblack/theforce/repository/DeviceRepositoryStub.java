@@ -1,6 +1,6 @@
-package com.lawlietblack.repository;
+package com.lawlietblack.theforce.repository;
 
-import com.lawlietblack.model.Device;
+import com.lawlietblack.theforce.model.Device;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +15,13 @@ public class DeviceRepositoryStub implements DeviceRepository {
             new Device(6, "Front Door", "lock", "Living Room", "locked")
     );
 
+    // TODO: krb wire to database
 
+    @Override
+    public Device create(Device device) {
+        // TODO:krb save to database
+        return device;
+    }
 
     @Override
     public List<Device> findAllDevices() {
@@ -30,5 +36,24 @@ public class DeviceRepositoryStub implements DeviceRepository {
             }
         }
         return null;
+    }
+
+
+    @Override
+    public Device update(Device device) {
+        // TODO:krb update database
+        // search the DB to see if we have an activity with that id already
+        // SELECT * FROM activity where id = ?
+        // if not, create
+        // INSERT activity (id, desc, duration) SELECT (?, ?, ?)
+        // if not, update
+        // UPDATE activity SET desc = ?, duration = ? WHERE id = ?
+        return device;
+    }
+
+    @Override
+    public void delete(Integer id) {
+        // TODO: delete from database
+
     }
 }

@@ -1,7 +1,7 @@
-package com.lawlietblack.service;
+package com.lawlietblack.theforce.service;
 
-import com.lawlietblack.repository.DeviceRepository;
-import com.lawlietblack.repository.DeviceRepositoryStub;
+import com.lawlietblack.theforce.repository.DeviceRepository;
+import com.lawlietblack.theforce.repository.DeviceRepositoryStub;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
@@ -10,7 +10,6 @@ import javax.ws.rs.core.Application;
 
 import static org.junit.Assert.assertEquals;
 
-// Not sure if this configuration is correct
 public class DeviceServiceTest extends JerseyTest {
     private DeviceRepository deviceRepository = new DeviceRepositoryStub();
 

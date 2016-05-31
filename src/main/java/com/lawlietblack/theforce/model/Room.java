@@ -1,8 +1,8 @@
-package com.lawlietblack.model;
+package com.lawlietblack.theforce.model;
 
 import java.util.List;
 
-public class Preset {
+public class Room {
     private Integer id;
     private String name;
     private List<Device> devices;
