@@ -1,7 +1,7 @@
 package com.lawlietblack.theforce.service;
 
 import com.lawlietblack.theforce.repository.DeviceRepository;
-import com.lawlietblack.theforce.repository.DeviceRepositoryStub;
+import com.lawlietblack.theforce.repository.DeviceRepositoryImpl;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import javax.ws.rs.core.Application;
 import static org.junit.Assert.assertEquals;
 
 public class DeviceServiceTest extends JerseyTest {
-    private DeviceRepository deviceRepository = new DeviceRepositoryStub();
+    private DeviceRepository deviceRepository = new DeviceRepositoryImpl();
 
     @Override
     protected Application configure() {

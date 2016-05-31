@@ -1,9 +1,16 @@
 package com.lawlietblack.theforce.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Entity
 @XmlRootElement
 public class Device {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
     private String type;
@@ -18,6 +25,13 @@ public class Device {
         this.type = type;
         this.room = room;
         this.status = status;
+    }
+
+    public Device(DeviceBuilder builder) {
+        this.name = builder.name;
+        this.type = builder.type;
+        this.room = builder.room;
+        this.status = builder.status;
     }
 
     @Override
@@ -69,5 +83,35 @@ public class Device {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public static class DeviceBuilder {
+        private String name;
+        private String type;
+        private String room;
+        private String status;
+
+        public DeviceBuilder(String name) {
+            this.name = name;
+        }
+
+        public DeviceBuilder deviceType(String type) {
+            this.type = type;
+            return this;
+        }
+
+        public DeviceBuilder inRoom(String room) {
+            this.room = room;
+            return this;
+        }
+
+        public DeviceBuilder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public Device build() {
+            return new Device(this);
+        }
     }
 }

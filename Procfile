@@ -1,0 +1,1 @@
+heroku deploy:war --war target/theforce.war --app the-force

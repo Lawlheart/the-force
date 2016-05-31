@@ -2,7 +2,7 @@ package com.lawlietblack.theforce.service;
 
 import com.lawlietblack.theforce.model.Device;
 import com.lawlietblack.theforce.repository.DeviceRepository;
-import com.lawlietblack.theforce.repository.DeviceRepositoryStub;
+import com.lawlietblack.theforce.repository.DeviceRepositoryImpl;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Path("devices")
 public class DeviceService {
-    private DeviceRepository deviceRepository = new DeviceRepositoryStub();
+    private DeviceRepository deviceRepository = new DeviceRepositoryImpl();
 
     // CREATE
     @POST
