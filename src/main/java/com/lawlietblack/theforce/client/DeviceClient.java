@@ -48,6 +48,7 @@ public class DeviceClient {
         WebTarget target = client.target("http://localhost:8080/api");
         Response response = target.path("/devices/" + device.getId()).request(MediaType.APPLICATION_JSON)
                 .put(Entity.entity(device, MediaType.APPLICATION_JSON));
+        System.out.println(response);
         if(response.getStatus() != 200) throw new RuntimeException(response.getStatus() + ": Internal Server Error");
 
         return response.readEntity(Device.class);
@@ -56,6 +57,7 @@ public class DeviceClient {
     public void delete(int id) {
         WebTarget target = client.target("http://localhost:8080/api");
         Response response = target.path("/devices/" + id).request(MediaType.APPLICATION_JSON).delete();
+        System.out.println(response);
         if(response.getStatus() != 200) throw new RuntimeException(response.getStatus() + ": Internal Server Error");
     }
 }

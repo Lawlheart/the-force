@@ -68,7 +68,11 @@ public class DeviceRepositoryImpl implements DeviceRepository {
         // TODO: delete from database
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.delete(findDeviceById(id));
+        try {
+            session.delete(findDeviceById(id));
+        } catch(Error e) {
+            System.out.println(e);
+        }
         session.getTransaction().commit();
         session.close();
     }
