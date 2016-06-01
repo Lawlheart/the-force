@@ -1,0 +1,19 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql:postgres://yruchjruavkujd:WmbFntrlHZHFtvS92fo0LXiAg6@ec2-54-235-86-129.compute-1.amazonaws.com:5432/d18rvfa7ejir4a</property>
+
+        <!-- SQL Dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+
+        <!-- Show the queries prepared by hibernate -->
+        <property name="show_sql">true</property>
+
+        <!-- Names the annotated entity classes -->
+        <mapping class="com.lawlietblack.theforce.model.Device"/>
+    </session-factory>
+</hibernate-configuration>
