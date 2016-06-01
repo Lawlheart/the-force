@@ -1,1 +1,1 @@
-web: java -jar target/webapp-runner*.jar --port $PORT com.lawlietblack.theforce
+web: java -jar target/webapp-runner*.jar --port $PORT target/theforce.war
