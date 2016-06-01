@@ -6,15 +6,19 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class DeviceRepositoryImpl implements DeviceRepository {
-    private static final SessionFactory sessionFactory = buildSessionFactory();
+    private static SessionFactory sessionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
+//        Configuration cfg = new Configuration();
+//        cfg.setProperty("hibernate.connection.url", System.getenv("DATABASE_URL")).configure();
+//        final ServiceRegistry registry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
+
         final ServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
         return new MetadataSources(registry).buildMetadata().buildSessionFactory();
     }
