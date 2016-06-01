@@ -2,7 +2,7 @@
     <session-factory>
         <!-- Database Connection Settings -->
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql:postgres://yruchjruavkujd:WmbFntrlHZHFtvS92fo0LXiAg6@ec2-54-235-86-129.compute-1.amazonaws.com:5432/d18rvfa7ejir4a</property>
+        <property name="connection.url">"#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/></property>
 
         <!-- SQL Dialect -->
         <property name="dialect">org.hibernate.dialect.PostgreSQL92Dialect</property>
