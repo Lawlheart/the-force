@@ -15,4 +15,3 @@ newrelic_agent.log
 # IntelliJ
 .idea/
 *.iml
-src/main/resources/
