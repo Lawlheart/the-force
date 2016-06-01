@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -javaagent:target/newrelic.jar -jar target/webapp-runner*.jar  --port $PORT target/*.war
+web:    java $JAVA_OPTS -javaagent:target/theforce/WEB-INF/lib/newrelic/newrelic.jar -jar target/webapp-runner*.jar  --port $PORT target/*.war

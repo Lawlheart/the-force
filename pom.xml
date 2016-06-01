@@ -40,15 +40,6 @@
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${project.build.directory}</outputDirectory>
                                 </artifactItem>
-                                <artifactItem>
-                                    <groupId>com.newrelic.agent.java</groupId>
-                                    <artifactId>newrelic-java</artifactId>
-                                    <version>${newrelic.version}</version>
-                                    <type>zip</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>target</outputDirectory>
-                                    <destFileName>newrelic.jar</destFileName>
-                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -95,13 +86,6 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.3-1102-jdbc41</version>
-        </dependency>
-        <dependency>
-            <groupId>com.newrelic.agent.java</groupId>
-            <artifactId>newrelic-java</artifactId>
-            <version>${newrelic.version}</version>
-            <scope>provided</scope>
-            <type>zip</type>
         </dependency>
     </dependencies>
     <properties>
