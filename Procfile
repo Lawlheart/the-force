@@ -1,1 +1,1 @@
-heroku deploy:war --war target/theforce.war --app the-force
+web: java -jar target/webapp-runner*.jar --port $PORT com.lawlietblack.theforce

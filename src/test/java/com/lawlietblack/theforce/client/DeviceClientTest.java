@@ -62,7 +62,8 @@ public class DeviceClientTest {
         device.setType("door");
         device.setRoom("garage");
         device.setStatus("closed");
-
+        client.create(device);
+        device.setStatus("open");
         device = client.update(device);
 
         assertNotNull(device);
