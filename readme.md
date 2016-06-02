@@ -3,21 +3,34 @@
 
 Home Automation REST API. 
 
+*Want to turn on the lights? Use The Force!*
 
 ##### I learned
 
-- How to configure and use Jersey, Tomcat, and Maven
-- How to set up web configuration
+- How to configure and use Jersey
+- How to add permanence with Hibernate
+- How to use Maven to manage dependencies and build projects
+- How to set up H2 and PostGreSQL configurations
+- How to set up a remote database
+- How to use Tomcat Server
+- How to write SQL queries
+- How to use Intellij for Maven and Hibernate projects
+- How to use Foreman to troubleshoot projects
 
 ##### Skills used 
 
 - Java
-- Maven
 - Jersey
+- Hibernate
+- H2 Database (Development)
+- PostGreSQL Database (Final)
+- Maven
 - Tomcat
+- Foreman
+- Postman
 - IntelliJ Idea IDE
 
-##### User Stories (In Progress)
+##### User Stories
 
 - As a user, I can visit the root directory for an overview of the REST services
 - As a user, I can retrieve a list of all of the devices in the house using HTTP (READ)
