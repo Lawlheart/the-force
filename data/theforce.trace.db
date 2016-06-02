@@ -1,9 +1,0 @@
-05-31 10:25:22 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Table "DEVICES" not found; SQL statement:
-SELECT * FROM devices [42102-176]
-05-31 10:27:09 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Table "DEVICES" not found; SQL statement:
-SELECT * FROM devices [42102-176]
-05-31 10:50:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLException: Table "DEVICES" not found; SQL statement:
-SELECT * FROM devices [42102-176]
